@@ -15,7 +15,7 @@ const PostsList = () => {
       </article>
     )
   })
-
+  
   return (
     <section className="App-posts">
       { elementsPost }
