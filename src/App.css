@@ -5,6 +5,9 @@
 }
 
 .App-title {
+  min-width: 50%;
+  margin: 2rem 1rem;
+  align-self: flex-start;
   padding: 10px 20px;
   border-radius: 4px;
   display: inline-block;
