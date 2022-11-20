@@ -26,9 +26,11 @@ const PostAddForm = () => {
 
   const canSave = Boolean(title) && Boolean(content) && Boolean(user);
 
+  const reactions = {thumbsUp: 0, hooray: 0, heart: 0, rocket: 0, eyes: 0}
+
   const onSavePost = () => {
     if (title && content && user){
-      dispatch(addPost(title, content, user))
+      dispatch(addPost(title, content, user, reactions))
       setTitle('')
       setContent('')
       setUser('0')

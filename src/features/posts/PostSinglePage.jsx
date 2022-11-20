@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import UserPost from "../users/UserPost";
+import { ReactionButtons } from "./ReactionButtons";
 import TiemAgo from "./TiemAgo";
 
 const PostSinglePage = () => {
@@ -21,11 +22,19 @@ const PostSinglePage = () => {
 
   return (
     <article className="App-post__post">
-      <h3>{singlePost.title}</h3>
-      <p>{singlePost.content}</p>
+      <div className="App-post__post-content">
+        <h3>{singlePost.title}</h3>
+        <p>{singlePost.content}</p>
+      </div>
       <UserPost userId={singlePost.userId} />
-      <Link to={`/editpost/${singlePost.id}`}>Edit post</Link>
+      <Link 
+        to={`/editpost/${singlePost.id}`} 
+        className="post-button"
+      >
+        Edit Post
+      </Link>
       <TiemAgo timestamp={singlePost.date} />
+      <ReactionButtons post={singlePost} />
     </article>
   );
 };

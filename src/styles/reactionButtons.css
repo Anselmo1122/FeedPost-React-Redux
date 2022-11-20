@@ -1,0 +1,14 @@
+.reaction-button__container {
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reaction-button {
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid #10a7d9;
+}
